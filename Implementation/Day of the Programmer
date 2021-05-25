@@ -1,0 +1,35 @@
+//link: https://www.hackerrank.com/challenges/day-of-the-programmer/problem
+#include<iostream>
+using namespace std;
+int main()
+{
+    int year;
+    cin>>year;
+    int days;
+    string month="09";
+    
+    if((year>=1700 && year<=1917) && (year%4==0))
+    {
+         days=256-244;
+            cout<<days<<"."<<month<<"."<<year;
+    }
+   
+    else if(year==1918)
+    {
+        cout<<26<<"."<<month<<"."<<year;
+    }
+  
+   
+        else if((year>1918) && (year%400 == 0) || ((year%4 ==0) &&(year%100 != 0)))
+        {
+            days=256-244;
+            cout<<days<<"."<<month<<"."<<year;
+        }      
+    
+   else
+        {
+            days=256-243;
+            cout<<days<<"."<<month<<"."<<year;
+        }
+    
+}
