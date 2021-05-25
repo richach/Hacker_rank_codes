@@ -1,0 +1,53 @@
+//Link: https://www.hackerrank.com/challenges/breaking-best-and-worst-records/problem
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int numofGames;
+    cin>>numofGames;
+    int MariaScore[numofGames];
+
+    for(int i=0;i<numofGames;i++)
+    {
+        cin>>MariaScore[i];
+    }
+
+    int maxCount=0;
+    int minCount=0;
+    
+    int result[2];
+    result[0]=maxCount;
+    result[1]=minCount;
+    
+    int highScore=MariaScore[0];
+        int loweScore=MariaScore[0];
+
+
+    for(int i=1;i<numofGames;i++)
+    {
+        
+        if(MariaScore[i]>highScore)
+        {
+            highScore=MariaScore[i];
+            result[0]++;
+
+        }
+
+        if(MariaScore[i]<loweScore)
+        {
+            loweScore=MariaScore[i];
+             result[1]++;
+
+        }
+    }
+    
+   // cout<<maxCount<<" "<<minCount;
+  for(int i=0;i<2;i++)
+  {
+      cout<<result[i]<<" ";
+ 
+  }
+
+
+}
