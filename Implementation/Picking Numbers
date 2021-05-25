@@ -1,0 +1,51 @@
+//Link: https://www.hackerrank.com/challenges/picking-numbers/problem
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num;
+    cin>>num;
+    int arr[num];
+    for(int i=0;i<num;i++)
+    {
+        cin>>arr[i];
+    }
+                    int temp=0;
+
+
+    for(int i=0;i<num;i++)
+    {
+        for(int j=i+1;j<num;j++)
+        {
+           if(arr[i]>arr[j])
+           {
+               temp=arr[i];
+               arr[i]=arr[j];
+               arr[j]=temp;
+           }
+         }
+    }     
+         int count=0,max=0;
+         for(int i=0;i<num;i++)
+         {
+             count=0;
+             for(int j=i+1;j<num;j++)
+             {
+                 if((arr[j]-arr[i]==1) || (arr[j]-arr[i]==0))
+                 {
+                     count++;
+                 }
+                 if(max<count)
+                 {
+                     max=count;
+                 }
+                 
+             }
+         }
+
+    
+    max=max+1;
+    cout<<max;
+
+}
