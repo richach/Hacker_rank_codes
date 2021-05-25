@@ -1,0 +1,41 @@
+//Link: https://www.hackerrank.com/challenges/grading/problem
+
+#include<iostream>
+using namespace std;
+int main()
+
+{
+    int number;
+    cin>>number;
+int marks[number];
+int i;
+for(int i=0;i<number;i++)
+{
+    cin>>marks[i];
+}
+
+for(int i=0;i<number;i++)
+{
+ int roundscore=(marks[i]/5)*5+5;
+
+ if(marks[i]>=38)
+ {
+     if(roundscore-marks[i]>=3)
+     {
+         cout<<marks[i]<<endl;
+     }
+     if(roundscore-marks[i]<3)
+     {
+         int afterRoundOf=(roundscore-marks[i])+marks[i];
+         cout<<afterRoundOf<<endl;
+     }
+ }
+ if(marks[i]<38)
+ {
+     cout<<marks[i]<<endl;
+ }
+
+
+}
+}
+
