@@ -1,0 +1,25 @@
+//link: https://www.hackerrank.com/challenges/kangaroo/problem
+
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    float x1,v1,x2,v2;
+    cin>>x1>>v1>>x2>>v2;
+
+    float t;
+
+    t=(x1-x2)/(v2-v1);
+
+    if(t==int(t) && t>0)
+    {
+        cout<<"YES"<<endl;
+    }
+    else
+    {
+        cout<<"NO"<<endl;
+    }
+
+}
+
