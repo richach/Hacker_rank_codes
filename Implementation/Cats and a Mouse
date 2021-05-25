@@ -1,0 +1,38 @@
+//link: https://www.hackerrank.com/challenges/cats-and-a-mouse/problem
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num;
+    cin>>num;
+    int X[num],Y[num],Z[num];
+    
+    for(int i=0;i<num;i++)
+    {
+        cin>>X[i]>>Y[i]>>Z[i];
+    }
+    
+    for(int i=0;i<num;i++)
+    {
+         int a=Z[i]-X[i];
+        int b=Z[i]-Y[i];
+       
+       if(abs(a)==abs(b))
+    {
+        cout<<"Mouse C"<<endl;
+    }
+    else if(abs(a)>abs(b))
+    {
+        cout<<"Cat B"<<endl;
+    }
+    else
+    {
+        cout<<"Cat A"<<endl;
+    }
+     
+    }
+    
+  
+    
+}
