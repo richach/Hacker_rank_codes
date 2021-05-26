@@ -1,0 +1,28 @@
+// link: https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem
+
+#include<iostream>
+using namespace std;
+int main()
+{
+   long int start,end,k,rem,rev=0,count=0,i;
+    cin>>start>>end>>k;
+
+    for(int num=start;num<=end;num++)
+    {
+       i=num;
+        rev=0;
+       while(i!=0)
+       {
+           rem=i%10;
+           rev=(rev*10)+rem;
+           i=i/10;
+       }  
+       if(abs(num-rev)%k==0)
+       {
+           count++;
+           
+       }    
+                                                                                         
+    }
+    cout<<count;
+}
