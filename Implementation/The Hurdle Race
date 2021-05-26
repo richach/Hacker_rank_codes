@@ -1,0 +1,64 @@
+//link: https://www.hackerrank.com/challenges/the-hurdle-race/problem
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num, height;
+    cin>>num;
+    cin>>height;
+    int hurdels[num];
+    int max=0;
+    for(int i=0;i<num;i++)
+    {
+        cin>>hurdels[i];
+    }
+    int temp=0;
+    for(int i=0;i<num;i++)
+    {
+        for(int j=i+1;j<num;j++)
+        {
+            if(hurdels[i]>hurdels[j])
+            {
+                temp=hurdels[i];
+                hurdels[i]=hurdels[j];
+                hurdels[j]=temp;
+            }   
+        }     
+    }
+    
+    
+        int last=hurdels[num-1];
+        
+        if(last>height)
+        {
+            cout<<last-height;
+        }
+        else
+        {
+            cout<<"0";
+        }
+    
+    
+   /* for(int i=0;i<num;i++)
+
+    {
+        if(hurdels[i]>hurdels[i+1])
+        {
+        max=hurdels[i]; 
+        }
+        else
+        {
+            max=hurdels[i+1];
+        }
+    }  
+    int diff;
+    diff= max-height;  
+    if(diff==0)
+    {
+        cout<<"0";
+    }
+    else
+    {
+        cout<<diff;
+    } */
+}
