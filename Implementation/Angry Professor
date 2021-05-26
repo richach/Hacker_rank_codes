@@ -1,0 +1,35 @@
+//link: https://www.hackerrank.com/challenges/angry-professor/problem
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num;
+    cin>>num;
+    int k,n,c1=0;
+    for(int i=0;i<num;i++)
+    {
+        c1=0;
+        cin>>n>>k;
+        int arr[n];
+        for(int j=0;j<n;j++)
+        {
+            cin>>arr[j];
+        }
+        for(int j=0;j<n;j++)
+        {
+            if(arr[j]<=0)
+            {
+                c1++;
+            }
+        }
+        if(c1>=k)
+        {
+            cout<<"NO"<<endl;
+        }
+        else
+        {
+            cout<<"YES"<<endl;
+        }
+    }
+}
