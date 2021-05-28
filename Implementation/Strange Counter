@@ -1,0 +1,17 @@
+//link: https://www.hackerrank.com/challenges/strange-code/problem
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    long t;
+    cin>>t;
+
+    long initial=3;
+while(t>initial)
+{
+initial=initial*2+3;
+}
+cout<<(initial-t+1);
+
+}
