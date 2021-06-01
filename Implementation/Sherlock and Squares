@@ -1,0 +1,22 @@
+//link: https://www.hackerrank.com/challenges/sherlock-and-squares/problem
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int num;
+    cin>>num;
+    for(int i=0;i<num;i++)
+    {
+        long long st,en;
+        cin>>st>>en;
+        int count=0;
+    
+            long long a=ceil(sqrt(st));
+            long long b=floor(sqrt(en));
+            count=b-a+1;
+            
+        cout<<count<<endl;
+         
+    }
+}
+
