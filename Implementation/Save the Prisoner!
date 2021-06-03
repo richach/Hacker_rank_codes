@@ -1,0 +1,17 @@
+//link: https://www.hackerrank.com/challenges/save-the-prisoner/problem
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    for(int i=0;i<t;i++)
+    {
+        long long n,m,s;
+        cin>>n>>m>>s;
+        
+           cout << 1 + (s - 1 + m - 1) % n << endl;
+
+    }
+}
