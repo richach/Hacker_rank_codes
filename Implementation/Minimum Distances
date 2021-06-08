@@ -1,0 +1,42 @@
+//link: https://www.hackerrank.com/challenges/minimum-distances/problem
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num;
+    cin>>num;
+    int arr[num];
+    for(int i=0;i<num;i++)
+    {
+        cin>>arr[i];
+    }
+    int least=0,count=0;
+    count=num;
+    for(int i=0;i<num;i++)
+    {
+        
+        for(int j=i+1;j<num;j++)
+        {
+           if(arr[i]==arr[j])
+           {
+              least=j-i;
+              if(least<count)
+              {
+                  count=least;
+              }
+             
+           }
+        }
+       
+    }
+    if(count==num)
+    {
+        cout<<"-1"<<endl;
+    }
+    else
+    {
+        cout<<count;
+    }
+}
+     
