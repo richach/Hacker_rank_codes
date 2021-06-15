@@ -1,0 +1,51 @@
+//link: https://www.hackerrank.com/challenges/beautiful-triplets/problem
+
+#include<iostream>
+using namespace std;
+int main()
+{
+   long num,d;
+   cin>>num>>d;
+   long arr[num];
+   for(int i=0;i<num;i++)
+   {
+       cin>>arr[i];
+   } 
+  /* for(int i=0;i<num;i++)
+   {
+       int temp=0;
+       for(int j=i+1;j<num;j++)
+       {
+           if(arr[i]>arr[j])
+           {
+               temp=arr[i];
+               arr[i]=arr[j];
+               arr[j]=temp;
+           }
+       }
+   } */
+   
+   long count=0;
+   for(int i=0;i<num;i++)
+   {
+       for(int j=i+1;j<num;j++)
+       {
+           if(arr[j]-arr[i]==d)
+           {
+
+                for(int k=j+1;k<num;k++)
+                {
+
+                    if((arr[k]-arr[j])==d)
+                    {
+                        count++;
+                        break;
+                        
+                    }
+                }    
+               
+           }
+       }
+   }
+   cout<<count;
+}
